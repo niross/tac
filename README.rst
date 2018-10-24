@@ -134,7 +134,3 @@ Given more time there are multiple things I would have liked to have done...
 
 * Once a comment has failed analysis there is no way to retry it. This could potentially be logged to Sentry and picked up by a support person I guess.
 * The analyse task is not really tested currently but ran out of time unfortunately.
-
-
-I have included some of my initial "whiteboard" working below for reference.
-
