@@ -1,15 +1,28 @@
 from rest_framework import viewsets
 
-from comments.models import Comment
-from comments.serializers import CommentSerializer
+from analysed_comments.comments.models import Comment
+from analysed_comments.comments.serializers import CommentSerializer
 
 
 class CommentViewSet(viewsets.ModelViewSet):
     """
-    API endpoint for listing, creating, editing and deleting Comments
+    test
+
+    retrieve:
+    Return the given comment.
+
+    list:
+    Return a list of all non-deleted comments.
+
+    create:
+    Create a new comment.
+
+    update:
+    Update an existing comment.
     """
     queryset = Comment.objects.filter(deleted=False)
     serializer_class = CommentSerializer
+    http_method_names = ['get', 'post', 'put', 'delete']
 
     def perform_update(self, serializer):
         """

@@ -6,7 +6,7 @@ import factory.fuzzy
 from rest_framework import status
 from rest_framework.test import APITestCase
 
-from comments.models import Comment
+from analysed_comments.comments.models import Comment
 
 
 class CommentFactory(factory.DjangoModelFactory):
@@ -17,7 +17,7 @@ class CommentFactory(factory.DjangoModelFactory):
 
 
 class CommentAPITestCase(APITestCase):
-    @mock.patch('comments.tasks.analyse_comment.delay')
+    @mock.patch('analysed_comments.comments.tasks.analyse_comment.delay')
     def test_list_comments(self, analyse_task):
         CommentFactory()
         CommentFactory()
@@ -37,7 +37,7 @@ class CommentAPITestCase(APITestCase):
         self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
         self.assertEqual(response.json(), {'text': ['This field may not be blank.']})
 
-    @mock.patch('comments.tasks.analyse_comment.delay')
+    @mock.patch('analysed_comments.comments.tasks.analyse_comment.delay')
     def test_post_comment(self, analyse_task):
         response = self.client.post(
             reverse('comments-api:comment-list'),
@@ -51,7 +51,7 @@ class CommentAPITestCase(APITestCase):
         self.assertEqual(comment.status, Comment.STATUS_PENDING)
         self.assertTrue(analyse_task.called_once_with(comment.id))
 
-    @mock.patch('comments.tasks.analyse_comment.delay')
+    @mock.patch('analysed_comments.comments.tasks.analyse_comment.delay')
     def test_put_comment_invalid(self, analyse_task):
         comment = CommentFactory()
         response = self.client.put(
@@ -63,7 +63,7 @@ class CommentAPITestCase(APITestCase):
         self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
         self.assertEqual(response.json(), {'text': ['This field may not be blank.']})
 
-    @mock.patch('comments.tasks.analyse_comment.delay')
+    @mock.patch('analysed_comments.comments.tasks.analyse_comment.delay')
     def test_put_comment(self, analyse_task):
         comment = CommentFactory()
         response = self.client.put(
@@ -82,7 +82,7 @@ class CommentAPITestCase(APITestCase):
         response = self.client.get(reverse('comments-api:comment-detail', args=(999,)))
         self.assertEqual(response.status_code, status.HTTP_404_NOT_FOUND)
 
-    @mock.patch('comments.tasks.analyse_comment.delay')
+    @mock.patch('analysed_comments.comments.tasks.analyse_comment.delay')
     def test_get_deleted_comment(self, analyse_task):
         comment = CommentFactory()
         comment.deleted = True
@@ -90,7 +90,7 @@ class CommentAPITestCase(APITestCase):
         response = self.client.get(reverse('comments-api:comment-detail', args=(comment.id,)))
         self.assertEqual(response.status_code, status.HTTP_404_NOT_FOUND)
 
-    @mock.patch('comments.tasks.analyse_comment.delay')
+    @mock.patch('analysed_comments.comments.tasks.analyse_comment.delay')
     def test_get_comment(self, analyse_task):
         comment = CommentFactory()
         response = self.client.get(reverse('comments-api:comment-detail', args=(comment.id,)))
@@ -101,7 +101,7 @@ class CommentAPITestCase(APITestCase):
         response = self.client.delete(reverse('comments-api:comment-detail', args=(999,)))
         self.assertEqual(response.status_code, status.HTTP_404_NOT_FOUND)
 
-    @mock.patch('comments.tasks.analyse_comment.delay')
+    @mock.patch('analysed_comments.comments.tasks.analyse_comment.delay')
     def test_delete_comment(self, analyse_task):
         comment = CommentFactory()
         response = self.client.delete(reverse('comments-api:comment-detail', args=(comment.id,)))

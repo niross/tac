@@ -1,8 +1,8 @@
 from django.db.models.signals import post_save
 from django.dispatch import receiver
 
-from comments.models import Comment
-from comments.tasks import analyse_comment
+from analysed_comments.comments.models import Comment
+from analysed_comments.comments.tasks import analyse_comment
 
 
 @receiver(post_save, sender=Comment)

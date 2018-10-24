@@ -4,7 +4,7 @@ from django.conf import settings
 from celery.task import task
 from watson_developer_cloud import ToneAnalyzerV3, WatsonApiException
 
-from comments.models import Comment
+from analysed_comments.comments.models import Comment
 
 
 log = logging.getLogger(__file__)

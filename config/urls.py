@@ -9,7 +9,7 @@ urlpatterns = [
     url(
         r'api/',
         include(
-            'comments.api_urls',
+            'analysed_comments.comments.api_urls',
             namespace='comments-api'
         )
     ),
