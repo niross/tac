@@ -274,3 +274,4 @@ analysed_comments/media/
 .env
 .envs/*
 !.envs/.local/
+.idea

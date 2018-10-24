@@ -65,7 +65,7 @@ THIRD_PARTY_APPS = [
 
 ]
 LOCAL_APPS = [
-    # 'analysed_comments.comments.apps.CommentsAppConfig',
+    'analysed_comments.comments.apps.CommentsConfig',
 ]
 # https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
@@ -185,6 +185,7 @@ CELERYD_TASK_SOFT_TIME_LIMIT = 60
 # ------------------------------------------------------------------------------
 
 # Swagger
+# ------------------------------------------------------------------------------
 SWAGGER_SETTINGS = {
     'USE_SESSION_AUTH': False,
     'SECURITY_DEFINITIONS': {},
