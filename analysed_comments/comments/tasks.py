@@ -48,7 +48,7 @@ def analyse_comment(comment_id):
 
     # Fail if no tones found
     if len(tones) == 0:
-        log.error('Failed to analyse comment with ID %s - %s', comment.id, ex)
+        log.error('Failed to analyse comment with ID %s - No tones found', comment.id)
         comment.status = comment.STATUS_FAILED
         comment.save()
         return

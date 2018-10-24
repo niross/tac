@@ -6,7 +6,7 @@ from comments.tasks import analyse_comment
 
 
 @receiver(post_save, sender=Comment)
-def comment_save(sender, instance, created, **kwargs):
+def comment_save(sender, instance, **kwargs):
     """
     Comment post save handler.
 
@@ -14,9 +14,10 @@ def comment_save(sender, instance, created, **kwargs):
 
     :param sender:
     :param instance:
-    :param created:
     :param kwargs:
     :return:
     """
     if (instance.status == instance.STATUS_PENDING) and not kwargs['raw']:
         analyse_comment.delay(instance.id)
+
+
