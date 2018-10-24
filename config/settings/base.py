@@ -190,3 +190,11 @@ SWAGGER_SETTINGS = {
     'USE_SESSION_AUTH': False,
     'SECURITY_DEFINITIONS': {},
 }
+
+# Watson
+# ------------------------------------------------------------------------------
+TONE_ANALYSER_ENDPOINT = 'https://gateway.watsonplatform.net/tone-analyzer/api'
+TONE_ANALYSER_VERSION = '2017-09-21'
+TONE_ANALYSER_TONE = 'emotion'
+TONE_ANALYSER_USERNAME = '9bd60b1a-4800-473b-ad49-1d9636ac89ca'
+TONE_ANALYSER_PASSWORD = '4FLutvAYpvbx'
