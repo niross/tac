@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="80a34104-2ac5-4240-92ca-8c147cb3b3ff" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/analysed_comments/comments/signals.py" beforeDir="false" afterPath="$PROJECT_DIR$/analysed_comments/comments/signals.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/analysed_comments/comments/tasks.py" beforeDir="false" afterPath="$PROJECT_DIR$/analysed_comments/comments/tasks.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/settings/production.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/settings/production.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -39,7 +35,7 @@
           <entry key="html" value="2" />
           <entry key="ini" value="1" />
           <entry key="postgres" value="1" />
-          <entry key="py" value="31" />
+          <entry key="py" value="32" />
           <entry key="pylintrc" value="1" />
           <entry key="rst" value="3" />
           <entry key="yml" value="2" />
@@ -50,7 +46,7 @@
           <entry key="HTML" value="2" />
           <entry key="Ini" value="2" />
           <entry key="PLAIN_TEXT" value="10" />
-          <entry key="Python" value="31" />
+          <entry key="Python" value="32" />
           <entry key="ReST" value="3" />
           <entry key="YAML" value="2" />
         </counts>
@@ -59,16 +55,16 @@
         <counts>
           <entry key="dummy" value="7" />
           <entry key="html" value="150" />
-          <entry key="py" value="5494" />
+          <entry key="py" value="5495" />
           <entry key="rst" value="62" />
-          <entry key="txt" value="51" />
+          <entry key="txt" value="90" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="150" />
-          <entry key="PLAIN_TEXT" value="58" />
-          <entry key="Python" value="5494" />
+          <entry key="PLAIN_TEXT" value="97" />
+          <entry key="Python" value="5495" />
           <entry key="ReST" value="62" />
         </counts>
       </usages-collector>
@@ -126,11 +122,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/analysed_comments/comments/tests/test_api_views.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="374">
-                  <caret line="78" column="51" selection-start-line="78" selection-start-column="51" selection-end-line="78" selection-end-column="51" />
-                  <folding>
-                    <element signature="e#0#11#0" expanded="true" />
-                  </folding>
+                <state relative-caret-position="30">
+                  <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
                 </state>
               </provider>
             </entry>
@@ -166,7 +159,7 @@
               <provider selected="true" editor-type-id="text-editor" />
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/analysed_comments/comments/api_views.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="315">
@@ -174,6 +167,15 @@
                   <folding>
                     <element signature="e#0#35#0" expanded="true" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/config/settings/production.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="209">
+                  <caret line="47" selection-start-line="47" selection-end-line="47" />
                 </state>
               </provider>
             </entry>
@@ -234,6 +236,7 @@
         <option value="$PROJECT_DIR$/analysed_comments/comments/api_views.py" />
         <option value="$PROJECT_DIR$/analysed_comments/comments/tasks.py" />
         <option value="$PROJECT_DIR$/analysed_comments/comments/tests/test_api_views.py" />
+        <option value="$PROJECT_DIR$/config/settings/production.py" />
       </list>
     </option>
   </component>
@@ -365,7 +368,14 @@
       <option name="project" value="LOCAL" />
       <updated>1540385254332</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Add api endpoints and associated tests">
+      <created>1540389045603</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1540389045603</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TodoView">
@@ -382,11 +392,11 @@
     <editor active="true" />
     <layout>
       <window_info id="Favorites" sideWeight="0.5016129" side_tool="true" weight="0.16168623" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4983871" visible="true" weight="0.16168623" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4983871" visible="true" weight="0.16168623" />
       <window_info id="Structure" order="1" sideWeight="0.5016129" side_tool="true" weight="0.16168623" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" visible="true" weight="0.32972974" />
+      <window_info anchor="bottom" id="Version Control" weight="0.32972974" />
       <window_info anchor="bottom" id="Python Console" weight="0.32972974" />
       <window_info anchor="bottom" id="Terminal" weight="0.32972974" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
@@ -396,7 +406,7 @@
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.26486486" />
+      <window_info active="true" anchor="bottom" id="TODO" order="6" visible="true" weight="0.26486486" />
       <window_info anchor="right" id="SciView" />
       <window_info anchor="right" id="Database" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -413,7 +423,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add model and signals" />
     <MESSAGE value="Add celery task" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add celery task" />
+    <MESSAGE value="Add api endpoints and associated tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add api endpoints and associated tests" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.envs/.production/.django">
@@ -532,13 +543,6 @@
     <entry file="file://$PROJECT_DIR$/README.rst">
       <provider selected="true" editor-type-id="restructured-text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/settings/production.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="46" column="38" lean-forward="true" selection-start-line="46" selection-start-column="38" selection-end-line="46" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/analysed_comments/comments/apps.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -648,11 +652,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/analysed_comments/comments/tests/test_api_views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="78" column="51" selection-start-line="78" selection-start-column="51" selection-end-line="78" selection-end-column="51" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="30">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
         </state>
       </provider>
     </entry>
@@ -663,6 +664,13 @@
           <folding>
             <element signature="e#0#35#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/settings/production.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="47" selection-start-line="47" selection-end-line="47" />
         </state>
       </provider>
     </entry>
