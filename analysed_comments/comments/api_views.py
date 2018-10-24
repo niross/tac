@@ -30,5 +30,6 @@ class CommentViewSet(viewsets.ModelViewSet):
         :param serializer:
         :return:
         """
-        serializer.instance.state = Comment.STATUS_PENDING
-        serializer.save()
+        instance = serializer.save()
+        instance.state = Comment.STATUS_PENDING
+        instance.save()
