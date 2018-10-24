@@ -1,0 +1,7 @@
+# PostgreSQL
+# ------------------------------------------------------------------------------
+POSTGRES_HOST=postgres
+POSTGRES_PORT=5432
+POSTGRES_DB=analysed_comments
+POSTGRES_USER=gjNERTphLGcEXHkfkeMyPuYSbJNWMZfY
+POSTGRES_PASSWORD=iZOJgdYegZswXItO7LOvJBQCaSB3NbgLEIYAhuzO9wlQVCWenyNn4XMgIRJ82g67

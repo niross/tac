@@ -1,0 +1,7 @@
+#!/bin/sh
+
+set -o errexit
+set -o nounset
+
+
+celery -A analysed_comments.taskapp worker -l INFO
